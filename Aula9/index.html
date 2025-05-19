@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos Com DOM</title>
+    <style>
+        body {
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+    <div>Clique em mim</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]; // atribui o valor do primeiro parágrafo a p1.
+        var p2 = window.document.getElementsByTagName('p')[1];
+        // window.document.write(p1.innerText) - exibe o texto 
+        p1.style.color = 'blue';
+        document.write(p2.innerText); // innerText não é suficiente para "puxar" o negrito da tag <strong></strong>
+    </script>
+</body>
+
+</html>

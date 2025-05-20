@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column-reverse;
+
+            height: 100svh;
+
+            gap: 8px;
+        }
+
+        button {
+            background-color: transparent;
+            border: 1px solid red;
+        }
+
+        button:hover {
+            cursor: pointer;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+
+<body class="changeableStyle">
+    <div class="buttonContainer">
+        <Button class="changeableStyle" onclick="increaseNum()">
+            Click Me!
+        </Button>
+    </div>
+
+    <div id="counter">
+        Counter inactive!
+    </div>
+
+    <script>
+        let numClicked = 0;
+
+        const bgStyled = document.getElementsByClassName("changeableStyle");
+
+        function increaseNum() {
+            numClicked++;
+
+            document.getElementById('counter').innerText = `Counter is at: ${numClicked}`;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -18,13 +18,18 @@
     <h1>Iniciando estudos DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
     <script>
+        // Não é seguro utilizar var aqui, devido ao escopo
         var p1 = window.document.getElementsByTagName('p')[0]; // atribui o valor do primeiro parágrafo a p1.
         var p2 = window.document.getElementsByTagName('p')[1];
         // window.document.write(p1.innerText) - exibe o texto 
         p1.style.color = 'blue';
         document.write(p2.innerText); // innerText não é suficiente para "puxar" o negrito da tag <strong></strong>
+        document.write(p2.innerHTML);
+
+        var d = window.document.querySelector("div#msg"); // mais prático para alterações rápidas no site
+        d.style.background = 'blue';
     </script>
 </body>
 
